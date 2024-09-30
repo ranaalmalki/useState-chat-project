@@ -17,8 +17,9 @@ setInputtext("")
     return (
         <div>
             <h1>  ChatScreen</h1>
-<div className="card w-96 bg-white h-96 border-solid border-cyan-600 border-4 ">
-    <div className="card-body">
+            <div>
+<div className="card w-96 bg-green-100 h-96 border-solid border-cyan-600 border-4  ">
+    <div className="card-body overflow-auto">
 <div className="chat chat-start">
   <div className="chat-image avatar">
     <div className="w-10 rounded-full">
@@ -48,11 +49,12 @@ setInputtext("")
     Anakin
     <time className="text-xs opacity-50">12:46</time>
   </div>
-  <div className="chat-bubble">{text}</div>
+  <div className="chat-bubble ">{text}</div>
   <div className="chat-footer opacity-50">Seen at 12:46</div>
 </div>
 ))}
-<div className="card-actions">
+ </div>
+<div className="flex ">
 <input 
   type="text"
   placeholder="Type here"
@@ -61,10 +63,14 @@ setInputtext("")
   onChange={inp}
   />
   <button type="button" className="btn" onClick={send}>send</button>
+  </div>
+
+ 
+
   
-  </div>
-  </div>
 </div>
+
+  </div>
         </div>
     )
 }
