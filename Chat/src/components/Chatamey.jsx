@@ -1,31 +1,31 @@
 import { useState } from "react"
+import PropTypes from "prop-types";
 
-function ChatScreen(props) {
+
+
+function Chatamey(props) {
 const [inputtext, setInputtext]=useState(" ")
 const [texts , setTexts]=useState([])
-
 
 const inp = (e)=>{
     setInputtext(e.target.value)
 }
 
 const send = ()=>{
-    if(inputtext.trim() !==""){
-        const message = `${props.name}:${inputtext}`
+    // if(inputtext !=""){
 setTexts([inputtext,...texts])
 setInputtext("")
-}
+// }
 
 }
     return (
         <div>
-            <h1>  ChatScreen</h1>
+            <h1>Amey</h1>
             <div>
-<div className="card w-96 bg-green-100 h-96 border-solid border-cyan-600 border-4  ">
+<div className="card w-96 bg-purple-300 h-96 border-solid border-cyan-600 border-4  ">
     <div className="card-body overflow-auto">
+    {texts.map((text,index)=>(
 
-{texts.map((text,index)=>(
-    
 <div className="chat chat-start" key={index}>
   <div className="chat-image avatar">
     <div className="w-10 rounded-full">
@@ -36,12 +36,16 @@ setInputtext("")
   </div>
   <div className="chat-header">
     {props.name}
-    <time className="text-xs opacity-50">12:46</time>
+    <time className="text-xs opacity-50">12:45</time>
   </div>
-  <div className="chat-bubble ">{text}</div>
-  <div className="chat-footer opacity-50">Seen at 12:46</div>
+  <div className="chat-bubble">{text}</div>
+  <div className="chat-footer opacity-50">Delivered</div>
 </div>
 ))}
+
+{/* {texts.map((text,index)=>( */}
+
+{/* ))} */}
  </div>
 <div className="flex ">
 <input 
@@ -64,4 +68,8 @@ setInputtext("")
     )
 }
 
-export default ChatScreen
+Chatamey.protoTypes ={
+    name:PropTypes.string.isRequired
+}
+
+export default Chatamey
