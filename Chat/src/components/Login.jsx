@@ -1,6 +1,6 @@
 import { useState } from "react"
 import Chatamey from "./Chatamey"
-function Login({setUser}) {
+function Login({setUser, userLabel}) {
 const [name , setName]=useState("")
 
 // const [savename ,setSavename]=useState(false)
@@ -17,7 +17,7 @@ const handleSubmit =(e)=>{
 };
   return (
     <div>
-        <h1>Login</h1>
+        <h1>Login -{userLabel}</h1>
         <div className="flex flex-col justify-center items-center">
             <form
             onSubmit={handleSubmit} >

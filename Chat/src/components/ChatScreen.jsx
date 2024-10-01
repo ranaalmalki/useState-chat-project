@@ -2,7 +2,7 @@ import { useState } from "react"
 
 function ChatScreen(props) {
 const [inputtext, setInputtext]=useState(" ")
-const [texts , setTexts]=useState([])
+// const [texts , setTexts]=useState([])
 
 
 const inp = (e)=>{
@@ -11,22 +11,23 @@ const inp = (e)=>{
 
 const send = ()=>{
     if(inputtext.trim() !==""){
-     `${props.name}:${inputtext}`
-setTexts([inputtext,...texts])
+  const message= {user:props.name , text:inputtext}
+// setTexts([inputtext,...texts])
+props.sendMessage(message)
 setInputtext("")
 }
 
 }
     return (
         <div>
-            <h1>  ChatScreen</h1>
+            <h1> ChatScreen-{props.name}</h1>
             <div>
 <div className="card w-96 bg-green-100 h-96 border-solid border-cyan-600 border-4  ">
     <div className="card-body overflow-auto">
 
-{texts.map((text,index)=>(
+{props.messages.map((mess,index)=>(
     
-<div className="chat chat-start" key={index}>
+<div className={`chat${mess.user=== props.name? 'chat-end':'chat-start'}`} key={index}>
   <div className="chat-image avatar">
     <div className="w-10 rounded-full">
       <img
@@ -35,10 +36,10 @@ setInputtext("")
     </div>
   </div>
   <div className="chat-header">
-    {props.name}
+    {mess.user}
     <time className="text-xs opacity-50">12:46</time>
   </div>
-  <div className="chat-bubble ">{text}</div>
+  <div className="chat-bubble ">{mess.text}</div>
   <div className="chat-footer opacity-50">Seen at 12:46</div>
 </div>
 ))}
