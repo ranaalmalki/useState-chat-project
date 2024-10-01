@@ -12,8 +12,14 @@ const sendMessage = (message)=>{
 }
 
   return (
-    <div className="flex flex-row justify-around">
-
+    <div className="flex flex-row justify-around items-center"
+    
+    style={{
+        backgroundImage:`url(https://pressstart.vip/images/uploads/assets/snowymountains.png)`,
+    height:'100vh'
+    }}
+    
+    >
 
    <>
 

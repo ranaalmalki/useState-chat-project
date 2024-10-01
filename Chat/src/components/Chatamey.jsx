@@ -22,7 +22,7 @@ setInputtext("")
 }
     return (
         <div>
-            <h1>Amey-{props.name}</h1>
+            <h1>{props.name}</h1>
             <div>
 <div className="card w-96 bg-purple-300 h-96 border-solid border-cyan-600 border-4  ">
     <div className="card-body overflow-auto">
