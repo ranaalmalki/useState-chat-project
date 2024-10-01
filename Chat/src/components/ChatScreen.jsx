@@ -1,4 +1,5 @@
 import { useState } from "react"
+import PropTypes from "prop-types";
 
 function ChatScreen(props) {
 const [inputtext, setInputtext]=useState(" ")
@@ -27,7 +28,9 @@ setInputtext("")
 
 {props.messages.map((mess,index)=>(
     
-<div className={`chat${mess.user=== props.name? 'chat-end':'chat-start'}`} key={index}>
+<div className={`chat ${mess.user=== props.name ? 'chat-start':'chat-end'}`} key={index}>
+{console.log(props.name)}
+
   <div className="chat-image avatar">
     <div className="w-10 rounded-full">
       <img
@@ -65,4 +68,10 @@ setInputtext("")
     )
 }
 
+ChatScreen.propTypes={
+    name:PropTypes.string.isRequired,
+    messages:PropTypes.array.isRequired,
+    sendMessage:PropTypes.func.isRequired,
+  
+  }
 export default ChatScreen

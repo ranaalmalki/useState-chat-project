@@ -13,7 +13,7 @@ const inp = (e)=>{
 
 const send = ()=>{
    if(inputtext.trim() !==""){
-    const message= {user: props.name , text:inputtext}
+    const message= { user: props.name , text:inputtext}
 // setTexts([inputtext,...texts])
 props.sendMessage(message)
 setInputtext("")
@@ -28,8 +28,10 @@ setInputtext("")
     <div className="card-body overflow-auto">
     {props.messages.map((mess,index)=>(
 
-<div className={`chat${mess.user=== props.name? 'chat-end':'chat-start'}`}  key={index}>
+<div className={`chat ${mess.user=== props.name ? 'chat-start':'chat-end'}`}  key={index}>
   <div className="chat-image avatar">
+  {console.log(mess.user)}
+
     <div className="w-10 rounded-full">
       <img
         alt="Tailwind CSS chat bubble component"
@@ -74,4 +76,10 @@ Chatamey.protoTypes ={
     name:PropTypes.string.isRequired
 }
 
+Chatamey.propTypes={
+  name:PropTypes.string.isRequired,
+  messages:PropTypes.array.isRequired,
+  sendMessage:PropTypes.func.isRequired,
+
+}
 export default Chatamey
