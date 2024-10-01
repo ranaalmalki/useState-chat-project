@@ -4,4 +4,13 @@
   text-align: center;
 }
 
+.chat-start .chat-bubble{
+background-color: #3f51b5;
+color: white;
+}
 
+.chat-end .chat-bubble{
+  background-color: #00bcd4;
+  color: white;
+}
+  
