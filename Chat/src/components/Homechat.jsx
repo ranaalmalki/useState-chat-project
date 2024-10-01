@@ -2,6 +2,7 @@ import Chatamey from "./Chatamey"
 import ChatScreen from "./ChatScreen"
 import Login from "./Login"
 import { useState } from 'react'
+import Navbar from "./Navbar"
 
 function Homechat() {
     const [user,setUser]=useState(null)
@@ -12,8 +13,9 @@ const sendMessage = (message)=>{
 }
 
   return (
+    <div>
+        {/* <Navbar/> */}
     <div className="flex flex-row justify-around items-center"
-    
     style={{
         backgroundImage:`url(https://pressstart.vip/images/uploads/assets/snowymountains.png)`,
     height:'100vh'
@@ -54,6 +56,7 @@ const sendMessage = (message)=>{
     </>
 
 
+    </div>
     </div>
   )
 }

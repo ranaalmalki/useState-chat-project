@@ -18,6 +18,8 @@ const handleSubmit =(e)=>{
     // {userLabel}
 };
   return (
+    <>
+    
     <div className="card border-solid border-black border-8 h-96 shadow-md shadow-gray-50 bg-white">
         <div className="card-body  justify-between h-full flex items-center ">
             {/* <div className=" flex"> */}
@@ -55,6 +57,7 @@ onChange={(e)=>{setName(e.target.value)}}
   </div>
 
     </div>
+    </>
   )
 }
 
