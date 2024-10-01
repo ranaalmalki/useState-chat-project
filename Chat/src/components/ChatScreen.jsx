@@ -11,7 +11,7 @@ const inp = (e)=>{
 
 const send = ()=>{
     if(inputtext.trim() !==""){
-        const message = `${props.name}:${inputtext}`
+     `${props.name}:${inputtext}`
 setTexts([inputtext,...texts])
 setInputtext("")
 }

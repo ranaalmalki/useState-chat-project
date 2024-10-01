@@ -12,10 +12,11 @@ const inp = (e)=>{
 }
 
 const send = ()=>{
-    // if(inputtext !=""){
+   if(inputtext.trim() !==""){
+     `${props.name}:${inputtext}`
 setTexts([inputtext,...texts])
 setInputtext("")
-// }
+}
 
 }
     return (

@@ -2,6 +2,7 @@ import { useState } from "react"
 import Chatamey from "./Chatamey"
 function Login({setUser}) {
 const [name , setName]=useState("")
+
 // const [savename ,setSavename]=useState(false)
 const handleSubmit =(e)=>{
     e.preventDefault();

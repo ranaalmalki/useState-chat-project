@@ -7,7 +7,7 @@ import Homechat from './components/Homechat'
 import Login from './components/Login'
 
 function App() {
-const [user,setUser]=useState(null)
+// const [user,setUser]=useState(null)
 
 // const  handlelogout =()=>{
 // setUser(null)
@@ -19,7 +19,7 @@ const [user,setUser]=useState(null)
    {/* <ChatScreen/> */}
    {/* <Chatamey/> */}
    {/* <Login/> */}
-{user ?(
+{/* {user ?(
   <ChatScreen name={user}/>
 ):(
   <Login  
@@ -27,7 +27,8 @@ const [user,setUser]=useState(null)
   />
 )
 
-}
+} */}
+<Homechat/>
 
     </>
   )
