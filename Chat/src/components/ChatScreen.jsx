@@ -2,6 +2,8 @@ import { useEffect, useRef, useState } from "react"
 import PropTypes from "prop-types";
 import chatlogo from '../assets/chat_5508181.png'
 import catIcon from "../assets/vecteezy_cat-sleeping-on-a-pillow_44782970.png"
+import caticon2 from "../assets/vecteezy_british-shorthair-clipart_24077630.png"
+
 function ChatScreen(props) {
 const [inputtext, setInputtext]=useState(" ")
 const scrolldown = useRef(null)
@@ -46,7 +48,7 @@ scrolldown.current?.scrollIntoView({behavior: 'smooth'})
     <div className="w-10 rounded-full  bg-gray-200">
       <img
         alt="Tailwind CSS chat bubble component"
-        src={catIcon} />
+        src={mess.user === props.name ? catIcon:caticon2} />
     </div>
   </div>
   <div className="chat-header text-black">
