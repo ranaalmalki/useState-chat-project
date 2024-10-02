@@ -13,12 +13,13 @@ const sendMessage = (message)=>{
 }
 
   return (
-    <div>
+    <div className="overflow-hidden ">
         {/* <Navbar/> */}
-    <div className="flex flex-row justify-around items-center"
+    <div className="flex md:flex-col md:gap-40 lg:flex-row lg:justify-around md:justify-start items-center md:p-40 w-full h-screen overflow-auto"
     style={{
         backgroundImage:`url(https://pressstart.vip/images/uploads/assets/snowymountains.png)`,
     height:'100vh'
+    
     }}
     
     >
@@ -30,6 +31,7 @@ const sendMessage = (message)=>{
   name={user} 
   messages={messages}
   sendMessage = {sendMessage}
+  className=""
   />
 ):(
   <Login  
@@ -43,6 +45,7 @@ const sendMessage = (message)=>{
   name={user2}
   messages={messages}
   sendMessage = {sendMessage}
+   className=""
   />
 ):(
   <Login  

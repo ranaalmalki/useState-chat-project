@@ -1,7 +1,7 @@
 import { useEffect, useRef,useState } from "react"
 import PropTypes from "prop-types";
 import chatlogo from '../assets/chat_5508181.png'
-
+import catIcon from "../assets/vecteezy_british-shorthair-clipart_24077630.png"
 
 
 function Chatamey(props) {
@@ -26,7 +26,7 @@ useEffect(()=>{
   scrolldown.current?.scrollIntoView({behavior: 'smooth'})
   },[props.messages])
     return (
-      <div className="card  border-solid border-black border-8  shadow-md shadow-gray-50 bg-white ">
+      <div className="card  border-solid border-black border-8  shadow-md shadow-gray-50 bg-white  ">
       <h1 className="flex flex-row flex-wrap justify-between p-7">
   <img 
       src={chatlogo}
@@ -42,13 +42,13 @@ useEffect(()=>{
   <div className="chat-image avatar">
   {console.log(mess.user)}
 
-    <div className="w-10 rounded-full">
+    <div className="w-10 rounded-full bg-slate-300">
       <img
         alt="Tailwind CSS chat bubble component"
-        src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+        src={catIcon} />
     </div>
   </div>
-  <div className="chat-header">
+  <div className="chat-header text-black">
     {mess.user}
     <time className="text-xs opacity-50">12:45</time>
   </div>
