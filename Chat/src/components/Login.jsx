@@ -2,6 +2,7 @@ import { useState } from "react"
 import Chatamey from "./Chatamey"
 import chatlogo from '../assets/chat_5508181.png'
 import cat from "../assets/vecteezy_cartoon-cute-character-funny-illustration-anime-cat_44022720.png"
+import iconeye from "../assets/vecteezy_eye-roll-face-emoji_47424812.png"
 function Login({setUser, userLabel}) {
 const [name , setName]=useState("")
 
@@ -12,10 +13,17 @@ const handleSubmit =(e)=>{
    setUser(name)
 
 }
-    // }else{
-    //     alert("please enter your name")
-    // }
-    // {userLabel}
+    else{
+        Swal.fire({
+          title: "Enter your name",
+          text: "How you gonna communicate with other without Login",
+          imageUrl:iconeye,
+          imageWidth: 100,
+          imageHeight: 100, 
+          imageAlt: 'Custom image',
+        });
+    }
+    {userLabel}
 };
   return (
     <>

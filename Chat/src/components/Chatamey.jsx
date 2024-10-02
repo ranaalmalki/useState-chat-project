@@ -21,7 +21,11 @@ const send = ()=>{
 // setTexts([inputtext,...texts])
 props.sendMessage(message)
 setInputtext("")
-}}
+}else{
+  alert("Enter message you can send nothing ")
+}
+
+}
 
 useEffect(()=>{
   scrolldown.current?.scrollIntoView({behavior: 'smooth'})
